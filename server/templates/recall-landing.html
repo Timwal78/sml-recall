@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SML-RECALL: External Brain for Claude</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #e0e0e0;
+            --cyan: #00FFFF;
+            --green: #39FF14;
+            --gold: #FFD700;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: var(--cyan);
+            font-weight: bold;
+            margin-top: 2rem;
+        }
+        h1::before, h2::before {
+            content: "━━━ ";
+        }
+        h1::after, h2::after {
+            content: " ━━━";
+        }
+        .green { color: var(--green); }
+        .cyan { color: var(--cyan); }
+        .gold { color: var(--gold); }
+        
+        .tier-card {
+            border: 1px solid var(--cyan);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            background: rgba(0, 255, 255, 0.05);
+        }
+        .tier-card.beastmode {
+            border-color: var(--gold);
+            background: rgba(255, 215, 0, 0.05);
+        }
+        .tier-card.beastmode h2 { color: var(--gold); }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li::before {
+            content: "✅ ";
+            margin-right: 0.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--green);
+            border: 1px solid var(--green);
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: var(--green);
+            color: var(--bg-color);
+        }
+        .btn.gold-btn {
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+        .btn.gold-btn:hover {
+            background-color: var(--gold);
+            color: var(--bg-color);
+        }
+        
+        code {
+            background: #1a1a1a;
+            padding: 0.2rem 0.4rem;
+            color: var(--cyan);
+        }
+        
+        .warning {
+            border-left: 3px solid var(--gold);
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>SML-RECALL</h1>
+    <p class="cyan">The External Brain System for Claude Code.</p>
+    
+    <p>Claude starts cold every session and loses all context. SML-RECALL gives developers a structured memory system that Claude reads at session start, plus Python scripts that keep it current using your own Anthropic API key.</p>
+    
+    <div class="warning">
+        <p><strong>⚠️ NO SUBSCRIPTIONS. NO SAAS. NO BS.</strong></p>
+        <p>You bring your own Anthropic API key. All data stays local. Built by a disabled veteran for developers managing multiple projects across many sessions.</p>
+    </div>
+
+    <div class="tier-card">
+        <h2>CORE TIER</h2>
+        <p class="green">$27 One-Time Purchase</p>
+        <p>The essential scripts to manage your MASTER.md and context.</p>
+        <ul>
+            <li><code>summarize.py</code> - Auto-update MASTER.md from transcripts</li>
+            <li><code>briefing.py</code> - Generate <200 word session catch-up prompts</li>
+            <li><code>gap-finder.py</code> - Scan memory for gaps and fix them</li>
+            <li><code>decision-checker.py</code> - Prevent conflicting architectural decisions</li>
+        </ul>
+        <a href="/checkout/core" class="btn">BUY CORE [ Checkout ]</a>
+    </div>
+
+    <div class="tier-card beastmode">
+        <h2>BEASTMODE TIER</h2>
+        <p class="gold">$67 One-Time Purchase</p>
+        <p>Advanced context extraction and health scoring for power users.</p>
+        <ul>
+            <li>Everything in Core</li>
+            <li><code>auto-update.py</code> - Targeted updates for stale projects</li>
+            <li><code>context-engine.py</code> - Extract precision context slices</li>
+            <li><code>impact-analysis.py</code> - Map out what breaks across projects</li>
+            <li><code>thread-router.py</code> - Optimal start prompts per task</li>
+            <li><code>health-score.py</code> - AI-scored health report (A-F grade)</li>
+            <li><code>beastmode-prompts.md</code> - 30 advanced prompts</li>
+        </ul>
+        <a href="/checkout/beastmode" class="btn gold-btn">BUY BEASTMODE [ Checkout ]</a>
+    </div>
+
+    <div class="tier-card">
+        <h2>BUNDLE TIER</h2>
+        <p class="cyan">$97 One-Time Purchase</p>
+        <p>Everything in Beastmode + Bonus SML Systems (Coming Soon)</p>
+        <a href="/checkout/bundle" class="btn">BUY BUNDLE [ Checkout ]</a>
+    </div>
+
+    <h2>HOW IT WORKS</h2>
+    <p>1. Clone the free repo from GitHub.<br>
+       2. Purchase a key (CORE, BEAST, or BNDL).<br>
+       3. Paste your key and Anthropic API key in <code>config.yaml</code>.<br>
+       4. Run the python scripts to manage your external brain.</p>
+       
+    <p style="margin-top: 3rem; font-size: 0.8rem; text-align: center; color: #555;">
+        &copy; 2026 SML Sheets AI. All rights reserved.
+    </p>
+</body>
+</html>

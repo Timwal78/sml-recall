@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful - SML-RECALL</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #e0e0e0;
+            --cyan: #00FFFF;
+            --green: #39FF14;
+            --gold: #FFD700;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            color: var(--green);
+            font-weight: bold;
+            margin-top: 2rem;
+        }
+        h1::before { content: "━━━ "; }
+        h1::after { content: " ━━━"; }
+        
+        .key-box {
+            border: 2px solid var(--cyan);
+            padding: 2rem;
+            margin: 2rem 0;
+            background: rgba(0, 255, 255, 0.05);
+            font-size: 1.5rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+        }
+        
+        .instructions {
+            text-align: left;
+            border-left: 3px solid var(--green);
+            padding-left: 1rem;
+            margin: 2rem 0;
+            background: rgba(57, 255, 20, 0.05);
+            padding: 1.5rem;
+        }
+        
+        code {
+            background: #1a1a1a;
+            padding: 0.2rem 0.4rem;
+            color: var(--cyan);
+        }
+    </style>
+</head>
+<body>
+    <h1>PAYMENT SUCCESSFUL</h1>
+    <p>Thank you for purchasing the <strong>SML-RECALL {{ tier }}</strong> Tier.</p>
+    
+    <p>Here is your unique activation key:</p>
+    
+    <div class="key-box">
+        {{ key }}
+    </div>
+
+    <div class="instructions">
+        <h2 style="color: var(--cyan); margin-top: 0;">Next Steps:</h2>
+        <p>1. Clone the repository to your local machine.</p>
+        <p>2. Copy <code>config.yaml.example</code> to <code>config.yaml</code>.</p>
+        <p>3. Paste your key above into the <code>recall_key</code> field.</p>
+        <p>4. Add your Anthropic API key to the <code>claude_api_key</code> field.</p>
+        <p>5. Run <code>./install.sh</code> and start using SML-RECALL!</p>
+    </div>
+    
+    <p style="color: #666; font-size: 0.8rem;">Please save this key somewhere safe. It will not be emailed to you.</p>
+</body>
+</html>

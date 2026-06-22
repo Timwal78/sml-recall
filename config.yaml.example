@@ -1,0 +1,6 @@
+recall_key: CORE-XXXX-XXXX-XXXX-XXXX   # or BEAST- or BNDL-
+claude_api_key: sk-ant-...             # user's own Anthropic key
+claude_model: claude-opus-4-8          # optional, this is the default
+master_path: MASTER.md                 # optional, relative to repo root
+threads_path: free/templates/thread-tracker.md
+decisions_path: free/templates/decision-log.md

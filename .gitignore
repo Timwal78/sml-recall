@@ -1,0 +1,10 @@
+﻿config.yaml
+MASTER.md
+keys_pool.json
+*_keys_for_gumroad.txt
+gumroad_keys.txt
+server/.env
+server/instance/
+__pycache__/
+*.pyc
+lib/__pycache__/
